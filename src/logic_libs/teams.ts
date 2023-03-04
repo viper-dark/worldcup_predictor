@@ -1,6 +1,6 @@
 export const teams = [
   ["Qatar", "Ecuador", "Senegal", "Netherlands"],
-  ["England", "Iran", "United States", "Wales"],
+  ["United Kingdom", "Iran", "United States", "Wales"],
   ["Argentina", "Saudi Arabia", "Mexico", "Poland"],
   ["France", "Australia", "Denmark", "Tunisia"],
   ["Spain", "Costa Rica", "Geramany", "Japan"],

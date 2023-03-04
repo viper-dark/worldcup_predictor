@@ -177,7 +177,7 @@ export function recordResults(predictions, genedMatches) {
   return groups;
 }
 
-function genRound16(groups: Group[]) {
+export function genRound16(groups: Group[]) {
   const matches: Array<String>[] = [];
   for (let index = 0; index < groups.length; index += 2) {
     //winner group i vs runner up group i+1

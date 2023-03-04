@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { seedData, genGames, recordResults } from "../logic_libs";
+import { seedData, genGames, recordResults, genRound16 } from "../logic_libs";
 
 const groups = ["A", "B", "C", "D", "E", "F", "G", "H"];
 
@@ -70,7 +70,7 @@ function Matches({ group, dataGroup, genedMatches, modDataGroup }) {
       <Link
         className="bg-blue-400 rounded-lg p-2"
         to={`round16`}
-        state={groups}
+        state={genRound16(dataGroup)}
       >
         Next Round of 16
       </Link>

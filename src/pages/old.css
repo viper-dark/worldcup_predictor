@@ -1,5 +1,4 @@
- 
-  body {
+body {
     /* CSS Variables that may have been missed get put on body */
     --ec-primary: #005CFF;
     --ec-secondary: #333333;
@@ -28,7 +27,11 @@
     --ec-interaction-a: #004ACC;
     --ec-interaction-compl: #FFFFFF;
     --ec-interaction-high-contrast: #FFFFFF;
-    
+    --ec-text-01: #E6E6E6;
+    --ec-text-02: #999999;
+    --ec-text-03: #B3B3B3;
+    --ec-text-04: #FFFFFF;
+    --ec-text-05: #FFFFFF;
     --ec-ui-02: #E6E6E6;
     --ec-ui-03: rgba(255, 255, 255, 0.55);
     --ec-background: #211431;
@@ -1045,7 +1048,7 @@ button {
 
 .xJAsxE {
     transition: transform .5s ease-out;
-    height: 132px;
+    height: 159px;
     position: absolute;
     box-shadow: 0 6px 14px rgba(0, 0, 0, .1);
     width: 100%;
@@ -1312,7 +1315,7 @@ img {
 
 .bIaQo9 {
     display: flex;
-    width: 37px;
+    width: 26px;
     height: 26px;
     background: var(--ec-ui-02);
     margin-right: 10px;
