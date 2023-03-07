@@ -1,12 +1,12 @@
 export const teams = [
   ["Qatar", "Ecuador", "Senegal", "Netherlands"],
-  ["United Kingdom", "Iran", "United States", "Wales"],
+  ["England", "Iran", "United States", "Wales"],
   ["Argentina", "Saudi Arabia", "Mexico", "Poland"],
   ["France", "Australia", "Denmark", "Tunisia"],
-  ["Spain", "Costa Rica", "Geramany", "Japan"],
+  ["Spain", "Costa Rica", "Germany", "Japan"],
   ["Belgium", "Canada", "Morocco", "Croatia"],
-  ["Brazil", "Serbia", "Switzland", "Cameroon"],
-  ["Portugal", "Ghana", "Urguay", "South Korea"],
+  ["Brazil", "Serbia", "Switzerland", "Cameroon"],
+  ["Portugal", "Ghana", "Uruguay", "South Korea"],
 ];
 
 export const predictions = [

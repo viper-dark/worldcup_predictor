@@ -2,6 +2,20 @@ import { useLocation } from "react-router-dom";
 import "./Round16.css";
 import { useState } from "react";
 import lookup from 'country-code-lookup'
+//adding wales 
+lookup.countries.push(
+
+  {
+    continent: 'Europe',
+    region: 'South East Europe',
+    country: 'Wales',
+    capital: 'Pristina',
+    fips: 'KV',
+    iso2: 'GB-WLS',
+    iso3: 'UNK',
+    isoNo: null,
+    internet: 'XK'
+  },)
 
 export function Round16() {
   //ocuntry code lookup to use dymanic images 
@@ -1316,7 +1330,7 @@ export function Round16() {
                       </div>
                       <div className="xJAsxE" style={{ top: 'calc(494px)' }}>
                         <div>
-                          <div ec-theme="dark" className="sZa2a7 ZXh5zu ZcoRFw wUXOVr">
+                         {qualified[2]?( <div ec-theme="dark" className="sZa2a7 ZXh5zu ZcoRFw wUXOVr">
                             <div className="yTI2ha ZXh5zu" id="90">
                               <div className="WwzEVC _1e7mHA">
                               <input
@@ -1341,9 +1355,9 @@ export function Round16() {
                                 <div className="PZ9lYl">{qualified[2]}</div>
                               </div>
                             </div>
-                          </div>
+                          </div>):null}
                           <div className="WGbpug" />
-                          <div ec-theme="light" className="sZa2a7 ZXh5zu hU8yP3 iJVC6P PMhDRr wUXOVr">
+                          {qualified[3]?(<div ec-theme="light" className="sZa2a7 ZXh5zu hU8yP3 iJVC6P PMhDRr wUXOVr">
                             <div className="yTI2ha" id="91">
                               <div className="WwzEVC _1e7mHA">
                               <input
@@ -1366,13 +1380,13 @@ export function Round16() {
                                 <div className="PZ9lYl">{qualified[3]}</div>
                               </div>
                             </div>
-                          </div>
+                          </div>):null}
                         </div>
 
                       </div>
                       <div className="xJAsxE" style={{ top: 'calc(876px)' }}>
                         <div>
-                          <div ec-theme="light" className="sZa2a7 ZXh5zu ZcoRFw iJVC6P PMhDRr wUXOVr">
+                         {qualified[4]?( <div ec-theme="light" className="sZa2a7 ZXh5zu ZcoRFw iJVC6P PMhDRr wUXOVr">
                             <div className="yTI2ha" id="100">
                               <div className="WwzEVC _1e7mHA">
                               <input
@@ -1395,9 +1409,9 @@ export function Round16() {
                                 <div className="PZ9lYl">{qualified[4]}</div>
                               </div>
                             </div>
-                          </div>
+                          </div>):null}
                           <div className="WGbpug" />
-                          <div ec-theme="dark" className="sZa2a7 ZXh5zu hU8yP3 wUXOVr">
+                        {qualified[5]?(  <div ec-theme="dark" className="sZa2a7 ZXh5zu hU8yP3 wUXOVr">
                             <div className="yTI2ha ZXh5zu" id="101">
                               <div className="WwzEVC _1e7mHA">
                               <input
@@ -1422,13 +1436,13 @@ export function Round16() {
                                 <div className="PZ9lYl">{qualified[5]}</div>
                               </div>
                             </div>
-                          </div>
+                          </div>):null}
                         </div>
 
                       </div>
                       <div className="xJAsxE" style={{ top: 'calc(1258px)' }}>
                         <div>
-                          <div ec-theme="dark" className="sZa2a7 ZXh5zu ZcoRFw wUXOVr">
+                         {qualified[6]?( <div ec-theme="dark" className="sZa2a7 ZXh5zu ZcoRFw wUXOVr">
                             <div className="yTI2ha ZXh5zu" id="110">
                               <div className="WwzEVC _1e7mHA">
                               <input
@@ -1453,9 +1467,9 @@ export function Round16() {
                                 <div className="PZ9lYl">{qualified[6]}</div>
                               </div>
                             </div>
-                          </div>
+                          </div>):null}
                           <div className="WGbpug" />
-                          <div ec-theme="light" className="sZa2a7 ZXh5zu hU8yP3 iJVC6P PMhDRr wUXOVr">
+                        {qualified[7]? ( <div ec-theme="light" className="sZa2a7 ZXh5zu hU8yP3 iJVC6P PMhDRr wUXOVr">
                             <div className="yTI2ha" id="111">
                               <div className="WwzEVC _1e7mHA">
                               <input
@@ -1478,7 +1492,7 @@ export function Round16() {
                                 <div className="PZ9lYl">{qualified[7]}</div>
                               </div>
                             </div>
-                          </div>
+                          </div>):null}
                         </div>
 
                       </div>
@@ -1503,7 +1517,7 @@ export function Round16() {
                     <div className="YMY4Bf">
                       <div className="xJAsxE" style={{ top: 'calc(303px)' }}>
                         <div>
-                          <div ec-theme="dark" className="sZa2a7 ZXh5zu ZcoRFw wUXOVr">
+                      {qualified[8] ?  ( <div ec-theme="dark" className="sZa2a7 ZXh5zu ZcoRFw wUXOVr">
                             <div className="yTI2ha ZXh5zu" id="120">
                               <div className="WwzEVC _1e7mHA">
                               <input
@@ -1527,9 +1541,9 @@ export function Round16() {
                                 <div className="PZ9lYl">{qualified[8]}</div>
                               </div>
                             </div>
-                          </div>
+                          </div>):null}
                           <div className="WGbpug" />
-                          <div ec-theme="light" className="sZa2a7 ZXh5zu hU8yP3 iJVC6P PMhDRr wUXOVr">
+                      { qualified[9]? (  <div ec-theme="light" className="sZa2a7 ZXh5zu hU8yP3 iJVC6P PMhDRr wUXOVr">
                             <div className="yTI2ha" id="121">
                               <div className="WwzEVC _1e7mHA">
                               <input
@@ -1551,13 +1565,13 @@ export function Round16() {
                                 <div className="PZ9lYl">{qualified[9]}</div>
                               </div>
                             </div>
-                          </div>
+                          </div>):null}
                         </div>
 
                       </div>
                       <div className="xJAsxE" style={{ top: 'calc(1067px)' }}>
                         <div>
-                          <div ec-theme="dark" className="sZa2a7 ZXh5zu ZcoRFw wUXOVr">
+                       {qualified[10] ?(  <div ec-theme="dark" className="sZa2a7 ZXh5zu ZcoRFw wUXOVr">
                             <div className="yTI2ha ZXh5zu" id="130">
                               <div className="WwzEVC _1e7mHA">
                               <input
@@ -1582,9 +1596,9 @@ export function Round16() {
                                 <div className="PZ9lYl">{qualified[10]}</div>
                               </div>
                             </div>
-                          </div>
+                          </div>):null}
                           <div className="WGbpug" />
-                          <div ec-theme="light" className="sZa2a7 ZXh5zu hU8yP3 iJVC6P PMhDRr wUXOVr">
+                        {qualified[11]?(  <div ec-theme="light" className="sZa2a7 ZXh5zu hU8yP3 iJVC6P PMhDRr wUXOVr">
                             <div className="yTI2ha" id="131">
                               <div className="WwzEVC _1e7mHA">
                               <input
@@ -1606,7 +1620,7 @@ export function Round16() {
                                 <div className="PZ9lYl">{qualified[11]}</div>
                               </div>
                             </div>
-                          </div>
+                          </div>):null}
                         </div>
 
                       </div>
@@ -1640,7 +1654,7 @@ export function Round16() {
                           </div>):null}
                         </div>
                         <div>
-                          <div ec-theme="dark" className="sZa2a7 ZXh5zu ZcoRFw wUXOVr">
+                     {qualified[12]?    ( <div ec-theme="dark" className="sZa2a7 ZXh5zu ZcoRFw wUXOVr">
                             <div className="yTI2ha ZXh5zu" id="140">
                               <div className="WwzEVC _1e7mHA">
                               <input
@@ -1665,9 +1679,9 @@ export function Round16() {
                                 <div className="PZ9lYl">{qualified[12]}</div>
                               </div>
                             </div>
-                          </div>
+                          </div>):null}
                           <div className="WGbpug" />
-                          <div ec-theme="light" className="sZa2a7 ZXh5zu hU8yP3 iJVC6P PMhDRr wUXOVr">
+                         {qualified[13]?( <div ec-theme="light" className="sZa2a7 ZXh5zu hU8yP3 iJVC6P PMhDRr wUXOVr">
                             <div className="yTI2ha" id="141">
                               <div className="WwzEVC _1e7mHA">
                               <input
@@ -1690,7 +1704,7 @@ export function Round16() {
                                 <div className="PZ9lYl">{qualified[13]}</div>
                               </div>
                             </div>
-                          </div>
+                          </div>):null}
                         </div>
 
                       </div>

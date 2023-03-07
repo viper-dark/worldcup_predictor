@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { seedData, genGames, recordResults, genRound16 } from "../logic_libs";
+import lookup from "country-code-lookup"
 
 const groups = ["A", "B", "C", "D", "E", "F", "G", "H"];
 
@@ -43,7 +44,11 @@ function Matches({ group, dataGroup, genedMatches, modDataGroup }) {
           id={"match" + group + index}
           className="mt-6 flex flex-row justify-end space-x-2"
         >
-          <div className="w-24">{match[0]}</div>
+           <div className="w-24" style={{ display:"inline-block",marginRight: "-2em"}}>{match[0]}</div>
+      <div style={{display:"inline"}}> <img className="HE3mn_" src={`https://flagcdn.com/w40/${ lookup.byCountry(match[0])?.iso2.toLocaleLowerCase()}.png`} srcSet="
+                              https://images.sports.gracenote.com/images/lib/basic/geo/country/flag/large/2208.png?imwidth=64 2x
+                            " alt="England" width="32px" />
+                            </div>
           <input
             className="w-8"
             value={results[group][index][0]}
@@ -64,11 +69,16 @@ function Matches({ group, dataGroup, genedMatches, modDataGroup }) {
             max="100"
             onChange={(e) => onChangeHandeler(index, 1, e.target.value)}
           ></input>
-          <div className="w-24">{match[1]}</div>
+          
+      <div style={{display:"inline"}}> <img className="HE3mn_" src={`https://flagcdn.com/w40/${ lookup.byCountry(match[1])?.iso2.toLocaleLowerCase()}.png`} srcSet="
+                              https://images.sports.gracenote.com/images/lib/basic/geo/country/flag/large/2208.png?imwidth=64 2x
+                            " alt="England" width="32px" />
+                            </div>
+                            <div className="w-24" style={{ display:"inline-block" }}>{match[1]}</div>
         </div>
       ))}
       <Link
-        className="bg-blue-400 rounded-lg p-2"
+        className="bg-blue-400 rounded-lg p-4 text-white"
         to={`round16`}
         state={genRound16(dataGroup)}
       >

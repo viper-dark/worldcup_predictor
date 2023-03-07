@@ -1,3 +1,16 @@
 td {
   text-align: center;
 }
+.radious
+{
+  border-radius: 1em;
+  
+}
+.td-border
+{
+  @apply   border-2 rounded-md  
+}
+table{
+  border-radius: 1em;
+  background-color: rgb(219 234 254)
+}

@@ -2,8 +2,8 @@
 @tailwind components;
 @tailwind utilities;
  
-body {
-    /* CSS Variables that may have been missed get put on body */
+/* CSS Variables that may have been missed get put on body */
+/* body {
     --ec-primary: #005cff;
     --ec-secondary: #333333;
     --ec-secondary-opacity: rgba(51, 51, 51, 0.1);
@@ -188,4 +188,4 @@ body {
     --darkreader-border--ec-ui-03: rgba(48, 52, 54, 0.55);
     --darkreader-bg--ec-background: #1a1027;
     --darkreader-bg--ec-elevation-01: #29183d;
-  }
+  } */

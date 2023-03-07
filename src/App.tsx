@@ -1,8 +1,36 @@
 import { useEffect, useRef, useState } from "react";
 import Matches from "./components/Matches";
 import "./App.css";
+import lookup from 'country-code-lookup'
 import { seedData, genGames } from "./logic_libs";
+//adding the coutry wales and england
+lookup.countries.push(
+
+  {
+    continent: 'Europe',
+    region: 'South East Europe',
+    country: 'Wales',
+    capital: 'Pristina',
+    fips: 'KV',
+    iso2: 'GB-WLS',
+    iso3: 'UNK',
+    isoNo: null,
+    internet: 'XK'
+  },
+  {
+    continent: 'Europe',
+    region: 'South East Europe',
+    country: 'England',
+    capital: 'Pristina',
+    fips: 'KV',
+    iso2: 'GB',
+    iso3: 'UNK',
+    isoNo: null,
+    internet: 'XK'
+  })
+
 const groups = ["A", "B", "C", "D", "E", "F", "G", "H"];
+ 
 
 function App() {
   const [selectedGroup, setGroup] = useState("A");
@@ -30,25 +58,25 @@ function App() {
     return null;
   }
   return (
-    <div className="p-12 m-auto bg-slate-500">
-      <div className="flex flex-row border-blue-500 border-4 text-center">
+    <div className="min-h-screen p-12 m-auto bg-azure-300">
+      <div className="flex flex-row border-blue-500 border-3 text-center mb-1">
         {groups.map((group) => (
           <button
             onClick={(e) => btn_group_click(e)}
-            className={isSelected(group) ? "flex-1 bg-green-600" : "flex-1"}
+            className={ `flex-1 rounded-md border-2 border-blue-200 ${isSelected(group) && "bg-blue-400 text-white"} `}
           >
             Group {group}
           </button>
         ))}
       </div>
-      <table className="w-5/6">
+      <table className="w-5/6 ">
         <thead>
-          <tr className="bg-violet-500 border-4">
-            <th className="w-1/4">Team</th>
-            <th className="w-1/12">Pts</th>
-            <th className="w-1/12">GF</th>
-            <th className="w-1/12">GA</th>
-            <th className="w-1/12">+/-</th>
+          <tr className="">
+            <th className="w-1/4  td-border">Team</th>
+            <th className="w-1/12 td-border">Pts</th>
+            <th className="w-1/12 td-border">GF</th>
+            <th className="w-1/12 td-border">GA</th>
+            <th className="w-1/12 td-border">+/-</th>
           </tr>
         </thead>
         <tbody className="">
@@ -71,12 +99,16 @@ function Group({ group, dataGroup }) {
   const groupData = dataGroup[gIndex];
 
   return groupData.ranking.map((team, index) => (
-    <tr className={index < 2 ? "bg-green-400" : ""}>
-      <td>{team}</td>
-      <td>{groupData.teams[team].points}</td>
-      <td>{groupData.teams[team].goalsF}</td>
-      <td>{groupData.teams[team].goalsA}</td>
-      <td>{groupData.teams[team].goalsD}</td>
+    <tr className={index < 2 ? "bg-green-400" : "bg-gray-300"}>
+      <td className="border-4 border-blue-100 rounded-md p-2 radious">    <div style={{width:"50%",display:"inline-block"}}>{team}</div>
+      <div style={{display:"inline"}}> <img className="HE3mn_" src={`https://flagcdn.com/w40/${ lookup.byCountry(team)?.iso2.toLocaleLowerCase()}.png`} srcSet="
+                              https://images.sports.gracenote.com/images/lib/basic/geo/country/flag/large/2208.png?imwidth=64 2x
+                            " alt="England" width="32px" />
+                            </div> </td>
+      <td className="border-4 border-blue-100 rounded-md radious ">{groupData.teams[team].goalsF}</td>
+      <td className="border-4 border-blue-100 rounded-md radious">{groupData.teams[team].points}</td>
+      <td className="border-4 border-blue-100 rounded-md radious ">{groupData.teams[team].goalsA}</td>
+      <td className="border-4 border-blue-100 rounded-md radious">{groupData.teams[team].goalsD}</td>
     </tr>
   ));
 }
